@@ -182,6 +182,11 @@ class MapboxMapBuilder implements MapboxMapOptionsSink {
   }
 
   @Override
+  public void setDoubleTapEnabled(boolean enabled) {
+    options.doubleTapGesturesEnabled(enabled);
+  }
+
+  @Override
   public void setAttributionButtonMargins(int x, int y) {
     switch (options.getAttributionGravity()) {
       case Gravity.TOP | Gravity.START:

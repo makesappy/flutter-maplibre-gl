@@ -1633,6 +1633,11 @@ final class MapboxMapController
   }
 
   @Override
+  public void setDoubleTapEnabled(boolean enabled) {
+    mapboxMap.getUiSettings().setDoubleTapGesturesEnabled(enabled);
+  }
+
+  @Override
   public void setAttributionButtonMargins(int x, int y) {
     switch (mapboxMap.getUiSettings().getAttributionGravity()) {
       case Gravity.TOP | Gravity.START:

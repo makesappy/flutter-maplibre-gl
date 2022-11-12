@@ -248,6 +248,10 @@ class Convert {
     if (zoomGesturesEnabled != null) {
       sink.setZoomGesturesEnabled(toBoolean(zoomGesturesEnabled));
     }
+    final Object doubleClickZoomEnabled = data.get("doubleClickZoomEnabled");
+    if (doubleClickZoomEnabled != null) {
+      sink.setDoubleTapEnabled(toBoolean(doubleClickZoomEnabled));
+    }
     final Object myLocationEnabled = data.get("myLocationEnabled");
     if (myLocationEnabled != null) {
       sink.setMyLocationEnabled(toBoolean(myLocationEnabled));
